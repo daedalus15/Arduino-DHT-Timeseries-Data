@@ -6,7 +6,7 @@ import time
 import json
 
 ser = serial.Serial('COM6', 9600, timeout=1)
-received_json = ""  # Variable to store received JSON
+received_json = ""  # Variable to store received JSON data
 
 def handle_client(client_socket):
     try:
@@ -29,7 +29,7 @@ def serial_reader():
             response = ser.readline().decode('utf-8').strip()
 
             if response:
-                received_json = response  # Store received JSON
+                received_json = response  # Store received JSON data
             time.sleep(0.1)
     except KeyboardInterrupt:
         exit(0)
