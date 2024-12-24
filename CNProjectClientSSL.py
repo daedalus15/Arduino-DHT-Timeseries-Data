@@ -49,7 +49,7 @@ def main():
                     plot.set_xdata(timestamps)
                     plot.set_ydata(data[labels[i].lower()])
                 
-            # Update plot limits only if there is data
+            # Update plot limits only if there is data else not
             if timestamps and any(data.values()):
                 ax.set_xlim(max(timestamps)-100,max(timestamps))
                 ax.set_ylim(-10,210)
